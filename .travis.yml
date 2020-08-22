@@ -21,5 +21,4 @@ install:
   - npm install
 
 script:
-  - npm install
-  - npm run build
+  - ng test
