@@ -7,8 +7,12 @@ node_js:
 branches:
   only:
     - master
+env:
+  - ANGULAR_VERSION=@angular/cli@10.0.7
+  - ANGULAR_VERSION=@angular/cli@8.3.29
+  - ANGULAR_VERSION=@angular/cli@7.3.10
 before_script:
-  - npm install -g @angular/cli
+  - npm install -g $ANGULAR_VERSION
 addons:
   apt:
     sources:
