@@ -1,10 +1,11 @@
-dist: trusty
-sudo: true
-
 language: node_js
 node_js:
   - '14'
-
+branches:
+  only:
+    - master
+before_script:
+  - npm install -g @angular/cli
 addons:
   apt:
     sources:
@@ -20,4 +21,5 @@ install:
   - npm install
 
 script:
-  - npm run test -- --watch=false --no-progress --browsers=ChromeHeadlessNoSandbox
+  - npm install
+  - npm run build
